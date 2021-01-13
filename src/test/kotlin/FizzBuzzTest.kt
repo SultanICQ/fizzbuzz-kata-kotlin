@@ -46,9 +46,9 @@ class FizzBuzzTest {
     }
 
     @Test
-    @Ignore
     fun `test obtain FizzBuzz word when number is divisible by 3 and 5`() {
         Assert.assertEquals(actor.result(15), "FizzBuzz")
+        Assert.assertEquals(actor.result(30), "FizzBuzz")
     }
 
 }

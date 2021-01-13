@@ -3,16 +3,18 @@ package org.kata.fizzbuzz
 class FizzBuzz(private val dividers: List<DividerBy>) {
     fun result(i: Int): String {
 
+        var result = ""
+
         for( divider in this.dividers) {
             if ( divider.applyTo(i) ) {
-                return divider.result()
+                result = result.plus( divider.result())
             }
         }
 
-        if (0 == i.rem(3) && 0 == i.rem(5)) {
-            return "FizzBuzz"
+        if (result.isEmpty() ) {
+            result = i.toString()
         }
 
-        return i.toString()
+        return result
     }
 }
