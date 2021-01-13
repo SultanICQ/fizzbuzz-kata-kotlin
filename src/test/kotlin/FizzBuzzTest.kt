@@ -2,6 +2,7 @@ import org.kata.fizzbuzz.DividerBy
 import org.kata.fizzbuzz.FizzBuzz
 import org.testng.Assert
 import org.testng.annotations.BeforeClass
+import org.testng.annotations.Ignore
 import org.testng.annotations.Test
 
 class FizzBuzzTest {
@@ -9,7 +10,7 @@ class FizzBuzzTest {
 
     @BeforeClass
     fun globalSetUp() {
-        val dividerBy3 = DividerBy(3)
+        val dividerBy3 = DividerBy(3, "Fizz")
         val dividers = listOf(dividerBy3)
         this.actor = FizzBuzz(dividers)
     }
@@ -37,13 +38,14 @@ class FizzBuzzTest {
     }
 
     @Test
-    fun `test obtain Buzz for numbers 5,10,20`() {
+    fun `test obtain Buzz for numbers 5, 10, 20`() {
         Assert.assertEquals(actor.result(5), "Buzz")
         Assert.assertEquals(actor.result(10), "Buzz")
         Assert.assertEquals(actor.result(20), "Buzz")
     }
 
     @Test
+    @Ignore
     fun `test obtain FizzBuzz word when number is divisible by 3 and 5`() {
         Assert.assertEquals(actor.result(15), "FizzBuzz")
     }
