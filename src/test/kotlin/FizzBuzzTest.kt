@@ -11,7 +11,8 @@ class FizzBuzzTest {
     @BeforeClass
     fun globalSetUp() {
         val dividerBy3 = DividerBy(3, "Fizz")
-        val dividers = listOf(dividerBy3)
+        val dividerBy5 = DividerBy(5, "Buzz")
+        val dividers = listOf(dividerBy3, dividerBy5)
         this.actor = FizzBuzz(dividers)
     }
 

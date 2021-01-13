@@ -12,12 +12,7 @@ class FizzBuzz(private val dividers: List<DividerBy>) {
         if (0 == i.rem(3) && 0 == i.rem(5)) {
             return "FizzBuzz"
         }
-/*        if (0 == i.rem(3)) {
-            return "Fizz"
-        }*/
-        if (0 == i.rem(5)) {
-            return "Buzz"
-        }
+
         return i.toString()
     }
 }
