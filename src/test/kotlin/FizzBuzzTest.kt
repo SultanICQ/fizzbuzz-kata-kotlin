@@ -1,14 +1,17 @@
+import org.kata.fizzbuzz.DividerBy
 import org.kata.fizzbuzz.FizzBuzz
 import org.testng.Assert
 import org.testng.annotations.BeforeClass
 import org.testng.annotations.Test
 
 class FizzBuzzTest {
-    private var actor = FizzBuzz()
+    private lateinit var actor:FizzBuzz
 
     @BeforeClass
     fun globalSetUp() {
-        this.actor = FizzBuzz()
+        val dividerBy3 = DividerBy(3)
+        val dividers = listOf(dividerBy3)
+        this.actor = FizzBuzz(dividers)
     }
 
     @Test

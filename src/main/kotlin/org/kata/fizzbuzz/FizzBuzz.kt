@@ -1,6 +1,6 @@
 package org.kata.fizzbuzz
 
-class FizzBuzz {
+class FizzBuzz(dividers: List<DividerBy>) {
     fun result(i: Int): String {
         if (0 == i.rem(3) && 0 == i.rem(5)) {
             return "FizzBuzz"
@@ -13,5 +13,4 @@ class FizzBuzz {
         }
         return i.toString()
     }
-
 }
